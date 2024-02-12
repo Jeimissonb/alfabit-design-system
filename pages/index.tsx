@@ -1,3 +1,5 @@
+import { Button } from "@/components/Button/Button";
+
 export default function App() {
-  return <h1>Hello Design System</h1>;
+  return <Button> Botão </Button>;
 }
