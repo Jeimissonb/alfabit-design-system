@@ -44,6 +44,8 @@ const config: Config = {
       md: "var(--text-md)",
       lg: "var(--text-lg)",
       xl: "var(--text-xl)",
+      "2xl": "var(--text-2xl)",
+      "4xl": "var(--text-4xl)",
     },
     extend: {
       colors: {

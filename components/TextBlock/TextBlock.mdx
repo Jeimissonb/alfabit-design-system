@@ -1,0 +1,24 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks'
+
+import * as Story from './TextBlock.stories.ts'
+
+<Meta of={Story} />
+
+# Entrada de Texto
+Este é o componente de bloco de texto, utilizado para receber um conjunto de informações através de texto.
+
+### Primário
+<Canvas of={Story.Primary} />
+
+### Primário Desabilitado
+<Canvas of={Story.PrimaryDisabled} />
+
+### Primário com label
+<Canvas of={Story.PrimaryLabel} />
+
+### Primário com label Desabilitado
+<Canvas of={Story.PrimaryLabelDisabled} />
+
+## Documentação Interativa
+<Primary />
+<Controls />
