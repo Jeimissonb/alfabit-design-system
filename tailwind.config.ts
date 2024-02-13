@@ -39,11 +39,11 @@ const config: Config = {
       9: "var(--spacing-4xl) /* 56px */",
     },
     fontSize: {
-      xs: "var(--font-xs)",
-      sm: "var(--font-sm)",
-      md: "var(--font-md)",
-      lg: "var(--font-lg)",
-      xl: "var(--font-xl)",
+      xs: "var(--text-xs)",
+      sm: "var(--text-sm)",
+      md: "var(--text-md)",
+      lg: "var(--text-lg)",
+      xl: "var(--text-xl)",
     },
     extend: {
       colors: {
@@ -56,6 +56,7 @@ const config: Config = {
         icon: "rgba(var(--icon), <alpha-value>)",
         outline: "rgba(var(--outline), <alpha-value>)",
         divider: "rgba(var(--divider), <alpha-value>)",
+        disabled: "rgba(var(--text-disabled), <alpha-value>)",
       },
       backgroundColor: {
         light: "rgba(var(--bg-light), <alpha-value>)",
@@ -68,7 +69,6 @@ const config: Config = {
           secondary: "rgba(var(--text-secondary), <alpha-value>)",
           tertiary: "rgba(var(--text-tertiary), <alpha-value>)",
         },
-        disabled: "rgba(var(--text-disabled), <alpha-value>)",
       },
       boxShadow: {
         sm: "var(--shadow-sm)",
