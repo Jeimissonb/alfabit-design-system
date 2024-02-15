@@ -6,7 +6,9 @@
 
 - **https://www.figma.com/file/h86gUvqUXTKwgr6tVYinLT/React%3A-Design-System-com-Tailwind?type=design&node-id=143%3A9138&mode=design&t=SJFgJbpSYGC8SjmA-1**
 
-## Passos para dar deploy de storybook com CI, bem como de outras aplicações React (_basta saber os scripts_)
+# Storybook Deploy With CI, by GitHub Actions
+
+## Passos para dar deploy de storybook com CI, bem como de outras aplicações React.
 
 > Os comandos a seguir funcionaram para deploy com integração contínua **_CI_** (onde o próprio Github actions faz todo o processo de build e deploy de forma automatizada com base nas alterações "**_on push_**" da branch configurada no arquivo .yaml) de storybook 7.6.15 com VITE 5.1.0, em um projeto React 18.2.0 com Typescript 5.2.2.
 
@@ -69,6 +71,10 @@ jobs:
 
 ### $${\color{green}FIM, PUBLISHED!!!}$$
 
+###
+
+# Storybook Static Deploy
+
 ## Passos para dar deploy de storybook estático, bem como de outras aplicações React (_basta saber os scripts_)
 
 > Os comandos a seguir funcionaram para deploy estático (onde é necessário baixar a aplicação em ambiente local e refazer todo o processo de build e deploy para cada alteração que houver no repositório) de storybook 7.6.15 com VITE 5.1.0, em um projeto React 18.2.0 com Typescript 5.2.2.
@@ -104,12 +110,14 @@ jobs:
 
 - OBS:
 
-  > ![erro de Filename too long](image.png)
+  > Caso apareça um erro de tamanho de arquivos no terminal **_FILENAME TOO LONG_**, execute o comando a seguir em um terminal com permissões de administrador, e em seguida, execute o comando de deploy novamente:
 
-  Caso apareça um erro de tamanho de arquivos no terminal, execute o comando a seguir em um terminal com permissões de administrador, e em seguida, execute o comando de deploy novamente:
+  ```js
+  > git config --system core.longpaths true
+  ```
 
-```js
-> git config --system core.longpaths true
-```
+- Após o processo ser concluído, será criada uma branch chamada **_gh-pages_** no repositório.
+  - E necessário estar selecionado o **_Deploy from a branch_** nas configurações de **_Build and deployment_** do projeto, com a branch **_gh-pages_** selecionada, bem como a sua respectiva pasta /(root), conforme a imagem:
+    > ![Deploy a partir de uma branch](./public/deployFromABranch.png)
 
 ### $${\color{green}FIM, PUBLISHED!!!}$$
