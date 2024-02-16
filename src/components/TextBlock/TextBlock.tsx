@@ -1,14 +1,8 @@
 export type TextBlockProps = {
   label?: string;
-  children: React.ReactNode;
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
-export function TextBlock({
-  label,
-  className,
-  children,
-  ...rest
-}: TextBlockProps) {
+export function TextBlock({ label, className, ...rest }: TextBlockProps) {
   return (
     <div className="relative">
       {label && (
