@@ -45,6 +45,9 @@ export default {
       xl: "var(--text-xl)",
       "2xl": "var(--text-2xl)",
       "4xl": "var(--text-4xl)",
+      tmd: "var(--title-md)",
+      tlg: "var(--title-lg)",
+      txl: "var(--title-xl)",
     },
     extend: {
       colors: {
