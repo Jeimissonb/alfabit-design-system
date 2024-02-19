@@ -17,6 +17,7 @@ const textVariants = cva("text-gray-primary text-sm font-normal", {
       title2: "text-tlg",
       title3: "text-tmd",
     },
+
     defaultVariants: {
       variant: "primary",
       size: "md",
