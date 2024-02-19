@@ -24,6 +24,7 @@ export function Box({
   filledBackground = false,
   type = "primary",
   children,
+  className,
   ...rest
 }: BoxProps) {
   const classes = classNames({
@@ -33,7 +34,7 @@ export function Box({
     [boxClassMap[type]]: children && filledBackground ? type : "",
   });
   return (
-    <div className={classes} {...rest}>
+    <div className={`${classes} ${className}`} {...rest}>
       {children}
     </div>
   );
