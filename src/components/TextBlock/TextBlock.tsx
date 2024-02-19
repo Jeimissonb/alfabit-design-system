@@ -1,23 +1,39 @@
-export type TextBlockProps = {
-  label?: string;
-} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+import classNames from "classnames";
+import { Box } from "../Box/Box";
+import { Typography } from "../Typography/Typography";
 
-export function TextBlock({ label, className, ...rest }: TextBlockProps) {
+export type TextBlockProps = {
+  title?: string;
+  type?: "primary" | "secondary" | "dark";
+  children: React.ReactNode;
+} & React.HTMLAttributes<HTMLElement>;
+
+export function TextBlock({
+  title,
+  type = "dark",
+  children,
+  className,
+  ...rest
+}: TextBlockProps) {
+  const textClass = classNames({
+    "text-primary": type === "primary",
+    "text-secondary": type === "secondary",
+    "text-black": type === "dark",
+  });
+
   return (
-    <div className="relative">
-      {label && (
-        <label className="absolute pt-3 pl-5 pr-5 text-4xl font-extrabold">
-          {label}
-        </label>
-      )}
-      <textarea
-        cols={30}
-        rows={7}
-        className={`resize-none bg-dark text-gray-primary text-md leading-6 rounded-md disabled:bg-disabled disabled:text-disabled disabled:border-2 disabled:border-disabled pl-5 pr-5 ${
-          label ? "pt-4xl" : "pt-5"
-        } ${className}`}
-        {...rest}
-      />
-    </div>
+    <Box
+      className={`flex flex-col gap-2 p-5 text-bla`}
+      type={type}
+      rounded
+      {...rest}
+    >
+      <div className={className}>
+        <Typography className={`${textClass}`} size="xl">
+          <span className="font-extrabold">{title}</span>
+        </Typography>
+        <Typography className={textClass}>{children}</Typography>
+      </div>
+    </Box>
   );
 }
